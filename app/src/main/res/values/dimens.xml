@@ -7,4 +7,5 @@
     <dimen name="sheet_corner">32dp</dimen>
     <dimen name="sheet_elevation">12dp</dimen>
     <dimen name="field_corner">24dp</dimen>
+    <dimen name="button_height">56dp</dimen>
 </resources>
