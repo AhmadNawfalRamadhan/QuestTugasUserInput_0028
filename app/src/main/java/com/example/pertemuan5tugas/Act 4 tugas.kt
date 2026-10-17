@@ -13,6 +13,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuBox
+import androidx.compose.material3.ExposedDropdownMenuDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
@@ -182,7 +183,18 @@ fun FormBiodata(modifier: Modifier = Modifier) {
                 expanded = expanded,
                 onExpandedChange = { expanded = it },
                 modifier = Modifier.weight(1f)
-            ) {}
+            ) {
+                OutlinedTextField(
+                    value = textExp,
+                    onValueChange = {},
+                    readOnly = true,
+                    singleLine = true,
+                    shape = fieldShape,
+                    label = { Text(stringResource(R.string.label_experience)) },
+                    trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expanded = expanded) },
+                    modifier = Modifier.menuAnchor()
+                )
+            }
         }
     }
 }
