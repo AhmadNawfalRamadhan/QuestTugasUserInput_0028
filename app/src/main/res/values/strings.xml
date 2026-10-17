@@ -18,4 +18,5 @@
     <string name="date_timezone">UTC</string>
     <string name="separator_list">, </string>
     <string name="desc_bg">Background neon</string>
+    <string name="desc_calendar">Pilih tanggal</string>
 </resources>
