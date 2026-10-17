@@ -87,4 +87,12 @@ fun FormBiodata(modifier: Modifier = Modifier) {
 
     val formatter = SimpleDateFormat(stringResource(R.string.date_format), Locale.getDefault())
     formatter.timeZone = TimeZone.getTimeZone(stringResource(R.string.date_timezone))
+
+    // variable untuk menyimpan data yang diperoleh dari komponen UI (setelah Proceed ditekan)
+    var depan by remember { mutableStateOf("") }
+    var belakang by remember { mutableStateOf("") }
+    var email by remember { mutableStateOf("") }
+    var tgl by remember { mutableStateOf("") }
+    var exp by remember { mutableStateOf("") }
+    var skill by remember { mutableStateOf("") }
 }
