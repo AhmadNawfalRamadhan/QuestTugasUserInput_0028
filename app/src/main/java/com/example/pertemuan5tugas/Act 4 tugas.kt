@@ -7,10 +7,13 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Checkbox
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -233,5 +236,18 @@ fun FormBiodata(modifier: Modifier = Modifier) {
                 }
             }
         }
+        // Tombol Proceed: aktif kalau semua isian terisi
+        Button(
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(dimensionResource(R.dimen.button_height)),
+            enabled = textDepan.isNotEmpty() && textBelakang.isNotEmpty() &&
+                    textEmail.isNotEmpty() && textTgl.isNotEmpty() && textExp.isNotEmpty(),
+            colors = ButtonDefaults.buttonColors(
+                containerColor = colorResource(R.color.purple_title),
+                contentColor = colorResource(R.color.white),
+                disabledContainerColor = colorResource(R.color.button_disabled),
+                disabledContentColor = colorResource(R.color.white)
+            ),
     }
 }
