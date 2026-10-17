@@ -4,6 +4,7 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -12,6 +13,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -125,6 +127,18 @@ fun FormBiodata(modifier: Modifier = Modifier) {
             color = colorResource(R.color.gray_text),
             textAlign = TextAlign.Center
         )
+
+        // Baris 1: nama depan & belakang
+        Row(horizontalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.padding_small))) {
+            OutlinedTextField(
+                value = textDepan,
+                singleLine = true,
+                shape = fieldShape,
+                modifier = Modifier.weight(1f),
+                label = { Text(stringResource(R.string.label_first_name)) },
+                onValueChange = { textDepan = it }
+            )
+        }
     }
 }
 
