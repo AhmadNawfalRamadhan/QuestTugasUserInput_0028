@@ -95,4 +95,6 @@ fun FormBiodata(modifier: Modifier = Modifier) {
     var tgl by remember { mutableStateOf("") }
     var exp by remember { mutableStateOf("") }
     var skill by remember { mutableStateOf("") }
+
+    val fieldShape = RoundedCornerShape(dimensionResource(R.dimen.field_corner))
 }
