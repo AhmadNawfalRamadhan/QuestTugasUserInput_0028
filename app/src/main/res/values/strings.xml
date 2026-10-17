@@ -24,4 +24,5 @@
     <string name="result_email">Email : %1$s</string>
     <string name="result_birth">Tgl Lahir : %1$s</string>
     <string name="result_experience">Experience : %1$s</string>
+    <string name="result_skills">Skill : %1$s</string>
 </resources>
