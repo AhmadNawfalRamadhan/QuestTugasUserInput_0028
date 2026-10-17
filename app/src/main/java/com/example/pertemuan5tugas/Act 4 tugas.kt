@@ -249,5 +249,18 @@ fun FormBiodata(modifier: Modifier = Modifier) {
                 disabledContainerColor = colorResource(R.color.button_disabled),
                 disabledContentColor = colorResource(R.color.white)
             ),
+            onClick = {
+                depan = textDepan
+                belakang = textBelakang
+                email = textEmail
+                tgl = textTgl
+                exp = textExp
+                skill = skillNames
+                    .filterIndexed { index, _ -> skillChecked[index] }
+                    .joinToString(separator)
+            }
+        ) {
+            Text(stringResource(R.string.btn_proceed), fontWeight = FontWeight.Bold)
+        }
     }
 }
