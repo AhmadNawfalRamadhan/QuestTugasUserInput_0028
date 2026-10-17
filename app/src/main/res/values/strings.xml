@@ -17,5 +17,5 @@
     <string name="date_format">dd/MM/yyyy</string>
     <string name="date_timezone">UTC</string>
     <string name="separator_list">, </string>
-    <string name="desc__bg">Background neon</string>
+    <string name="desc_bg">Background neon</string>
 </resources>
