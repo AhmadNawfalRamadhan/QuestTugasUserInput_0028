@@ -15,9 +15,7 @@ Tugas **User Input** menggunakan **Jetpack Compose**: Form Biodata dengan tampil
 
 | Form Belum Terisi | Form Sudah Terisi |
 |:---:|:---:|
-| ![Belum Terisi](<img width="369" height="814" alt="Screenshot 2026-10-17 160508" src="https://github.com/user-attachments/assets/5a7133b2-1fb2-4067-b961-96e87ba4801e" />
-) | ![Sudah Terisi](<img width="359" height="801" alt="Screenshot 2026-10-17 160440" src="https://github.com/user-attachments/assets/40083cb1-9acf-4a5e-a1ec-3546ce4861c9" />
-) |
+| [Belum Terisi]<img width="369" height="814" alt="Screenshot 2026-10-17 160508" src="https://github.com/user-attachments/assets/5a7133b2-1fb2-4067-b961-96e87ba4801e" />| [Sudah Terisi]<img width="359" height="801" alt="Screenshot 2026-10-17 160440" src="https://github.com/user-attachments/assets/40083cb1-9acf-4a5e-a1ec-3546ce4861c9" />|
 
 ## Fitur
 
