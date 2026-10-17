@@ -8,4 +8,5 @@
     <dimen name="sheet_elevation">12dp</dimen>
     <dimen name="field_corner">24dp</dimen>
     <dimen name="button_height">56dp</dimen>
+    <dimen name="card_corner">12dp</dimen>
 </resources>
