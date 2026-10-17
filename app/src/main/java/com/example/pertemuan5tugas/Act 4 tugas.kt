@@ -23,6 +23,9 @@ import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringArrayResource
 import androidx.compose.ui.res.stringResource
+import java.text.SimpleDateFormat
+import java.util.Locale
+import java.util.TimeZone
 
 @Composable
 fun FormBiodataScreen() {
@@ -81,4 +84,7 @@ fun FormBiodata(modifier: Modifier = Modifier) {
     )
     val skillChecked = remember { mutableStateListOf(false, false, false) }
     val separator = stringResource(R.string.separator_list)
+
+    val formatter = SimpleDateFormat(stringResource(R.string.date_format), Locale.getDefault())
+    formatter.timeZone = TimeZone.getTimeZone(stringResource(R.string.date_timezone))
 }
