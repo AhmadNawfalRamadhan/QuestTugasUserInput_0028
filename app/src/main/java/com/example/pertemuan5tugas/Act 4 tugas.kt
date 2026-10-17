@@ -1,11 +1,15 @@
 package com.example.pertemuan5tugas
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
@@ -97,4 +101,13 @@ fun FormBiodata(modifier: Modifier = Modifier) {
     var skill by remember { mutableStateOf("") }
 
     val fieldShape = RoundedCornerShape(dimensionResource(R.dimen.field_corner))
+
+    Column(
+        modifier = modifier
+            .verticalScroll(rememberScrollState())
+            .padding(dimensionResource(R.dimen.padding_large)),
+        verticalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.padding_medium)),
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {}
 }
+
