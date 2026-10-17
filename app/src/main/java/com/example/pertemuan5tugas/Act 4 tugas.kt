@@ -57,7 +57,7 @@ import java.util.Locale
 import java.util.TimeZone
 
 @Composable
-fun FormBiodataScreen() {
+fun FormBiodataScreen(modifier: Modifier) {
     Scaffold { innerPadding ->
         Box(
             modifier = Modifier
