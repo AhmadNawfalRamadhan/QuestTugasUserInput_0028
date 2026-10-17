@@ -63,4 +63,5 @@ fun FormBiodata(modifier: Modifier = Modifier) {
     // variable untuk mengingat nilai masukan dari keyboard
     var textDepan by remember { mutableStateOf("") }
     var textBelakang by remember { mutableStateOf("") }
+    var textEmail by remember { mutableStateOf("") }
 }
