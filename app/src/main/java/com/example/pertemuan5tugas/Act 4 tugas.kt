@@ -14,8 +14,10 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Checkbox
 import androidx.compose.material3.DropdownMenuItem
+import androidx.compose.material3.ElevatedCard
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.material3.ExposedDropdownMenuDefaults
@@ -261,6 +263,27 @@ fun FormBiodata(modifier: Modifier = Modifier) {
             }
         ) {
             Text(stringResource(R.string.btn_proceed), fontWeight = FontWeight.Bold)
+        }
+
+        // Card hasil (hanya muncul setelah Proceed ditekan)
+        if (depan.isNotEmpty()) {
+            ElevatedCard(
+                shape = RoundedCornerShape(dimensionResource(R.dimen.card_corner)),
+                elevation = CardDefaults.cardElevation(
+                    defaultElevation = dimensionResource(R.dimen.card_elevation)
+                ),
+                colors = CardDefaults.cardColors(containerColor = colorResource(R.color.black)),
+                modifier = Modifier.fillMaxWidth()
+            ) {
+                Column(modifier = Modifier.padding(dimensionResource(R.dimen.padding_medium))) {
+                    val warna = colorResource(R.color.white)
+                    Text(stringResource(R.string.result_name, depan, belakang), color = warna)
+                    Text(stringResource(R.string.result_email, email), color = warna)
+                    Text(stringResource(R.string.result_birth, tgl), color = warna)
+                    Text(stringResource(R.string.result_experience, exp), color = warna)
+                    Text(stringResource(R.string.result_skills, skill), color = warna)
+                }
+            }
         }
     }
 }
