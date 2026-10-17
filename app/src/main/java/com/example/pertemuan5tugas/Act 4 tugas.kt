@@ -30,6 +30,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringArrayResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import java.text.SimpleDateFormat
 import java.util.Locale
 import java.util.TimeZone
@@ -117,6 +118,12 @@ fun FormBiodata(modifier: Modifier = Modifier) {
             style = MaterialTheme.typography.headlineMedium,
             fontWeight = FontWeight.Bold,
             color = colorResource(R.color.purple_title)
+        )
+        Text(
+            text = stringResource(R.string.form_subtitle),
+            style = MaterialTheme.typography.bodySmall,
+            color = colorResource(R.color.gray_text),
+            textAlign = TextAlign.Center
         )
     }
 }
