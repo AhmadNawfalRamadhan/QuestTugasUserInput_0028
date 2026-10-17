@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.Checkbox
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuBox
@@ -208,6 +209,27 @@ fun FormBiodata(modifier: Modifier = Modifier) {
                             }
                         )
                     }
+                }
+            }
+        }
+        // Baris 4: skill (checkbox)
+        Text(
+            text = stringResource(R.string.label_skills),
+            style = MaterialTheme.typography.titleSmall,
+            fontWeight = FontWeight.Bold,
+            modifier = Modifier.fillMaxWidth()
+        )
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.SpaceBetween
+        ) {
+            skillNames.forEachIndexed { index, name ->
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    Checkbox(
+                        checked = skillChecked[index],
+                        onCheckedChange = { skillChecked[index] = it }
+                    )
+                    Text(text = name, style = MaterialTheme.typography.bodySmall)
                 }
             }
         }
