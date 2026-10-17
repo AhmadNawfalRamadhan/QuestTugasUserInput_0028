@@ -19,4 +19,6 @@
     <string name="separator_list">, </string>
     <string name="desc_bg">Background neon</string>
     <string name="desc_calendar">Pilih tanggal</string>
+
+    <string name="result_name">Nama : %1$s %2$s</string>
 </resources>
